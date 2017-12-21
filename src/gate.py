@@ -14,8 +14,8 @@ for k, v in data.iteritems():
     high = float(v["high24hr"])
     low = float(v["low24hr"])
     cur = float(v["last"])
-    if not filter_coin(k) or cur >= high:
-        continue
+    # if not filter_coin(k) or cur >= high:
+    #     continue
     poss.append({
         "name": k,
         "potential": int((high - cur) * 100 / cur),
